@@ -111,7 +111,7 @@ void datahandeler(std::string fin, std::string fout) {
                         // }
 
                         for (int part = 1; part < pid->size(); part++) {
-                                if (beta->at(part) < 0.02 || p->at(part) < 0.02) continue; // cut # 3
+                                //if (beta->at(part) < 0.02 || p->at(part) < 0.02) continue; // cut # 3
 
                                 dt->dt_calc(p->at(part), sc_ftof_1b_time->at(part), sc_ftof_1b_path->at(part), sc_ftof_1a_time->at(part),
                                             sc_ftof_1a_path->at(part), sc_ftof_2_time->at(part), sc_ftof_2_path->at(part),
