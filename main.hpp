@@ -128,8 +128,8 @@ void datahandeler(std::string fin, std::string fout) {
                                 if (/*event->W() < 1.40 &&  event->W() > 1.20 &&*/ event->Q2() < 15.0 && event->Q2() > 0.0) { // cut # 5
 
                                         if (charge->at(part) == -1) { // cut # 6
-                                                if (abs(dt->dt_Pi()) < 0.5 || abs(dt->dt_ctof_Pi()) < 0.5)
-                                                /*&&(pid->at(part) == PIM))*/ { // cut # 8
+                                                if /*(abs(dt->dt_Pi()) < 0.5 || abs(dt->dt_ctof_Pi()) < 0.5)
+                                                &&*/(pid->at(part) == PIM)) { // cut # 8
                                                         event->SetPim(px->at(part), py->at(part), pz->at(part), MASS_PIP);
                                                         good_pim = e_cuts->pim_cuts(status->at(part), charge->at(part), event->pim_mu_prime().P(), pid->at(part),
                                                                                     chi2pid->at(part));
@@ -183,17 +183,18 @@ void datahandeler(std::string fin, std::string fout) {
 
                                         } else if (charge->at(part) == 1) { // cut # 6
 
-                                                if ((abs(dt->dt_P()) < 0.6) || (abs(dt->dt_ctof_P()) < 0.5 && (dt->dt_ctof_P() > (1.92* p->at(part) * p->at(part)) - 3.673 * p->at(part) +2))) /*&&
-                                                                                                                                                                                                  /*&&(pid->at(part) == PROTON))*/{ // cut 9
+                                               if /*((abs(dt->dt_P()) < 0.6) || (abs(dt->dt_ctof_P()) < 0.5 && (dt->dt_ctof_P() > (1.92* p->at(part) * p->at(part)) - 3.673 * p->at(part) +2))) /*&&
+                                                                                          &&*/(pid->at(part) == PROTON){ // cut 9
                                                         event->SetProton(px->at(part), py->at(part), pz->at(part), MASS_P);
                                                         good_p = e_cuts->proton_cuts(status->at(part), charge->at(part), event->p_mu_prime().P(), pid->at(part),
                                                                                      chi2pid->at(part));
                                                         good_hadron_ctof_P = e_cuts->hadron_cuts_ctof(status->at(part), charge->at(part), event->p_mu_prime().P(),
                                                                                                       pid->at(part), chi2pid->at(part));
 
-                                                } else if (abs(dt->dt_Pi()) < 0.50 || (dt->dt_ctof_Pi() < 0.5 && dt->dt_ctof_Pi() > -0.3))
+                                                }
+                                              }//else if (abs(dt->dt_Pi()) < 0.50 || (dt->dt_ctof_Pi() < 0.5 && dt->dt_ctof_Pi() > -0.3))
                                                 //(dt->dt_ctof_Pi() > (0.67 * p->at(part) - 4.5))*/
-                                                { // cut 9
+                                                if (pid->at(part) == PIP){ // cut 9
                                                         event->SetPip(px->at(part), py->at(part), pz->at(part), MASS_PIP);
                                                         good_pip = e_cuts->pip_cuts(status->at(part), charge->at(part), event->pip_mu_prime().P(), pid->at(part),
                                                                                     chi2pid->at(part));
