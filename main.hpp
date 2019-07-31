@@ -129,7 +129,7 @@ void datahandeler(std::string fin, std::string fout) {
 
                                         if (charge->at(part) == -1) { // cut # 6
                                                 if /*(abs(dt->dt_Pi()) < 0.5 || abs(dt->dt_ctof_Pi()) < 0.5)
-                                                &&*/(pid->at(part) == PIM)) { // cut # 8
+                                                &&*/(pid->at(part) == PIM) { // cut # 8
                                                         event->SetPim(px->at(part), py->at(part), pz->at(part), MASS_PIP);
                                                         good_pim = e_cuts->pim_cuts(status->at(part), charge->at(part), event->pim_mu_prime().P(), pid->at(part),
                                                                                     chi2pid->at(part));
@@ -192,7 +192,7 @@ void datahandeler(std::string fin, std::string fout) {
                                                                                                       pid->at(part), chi2pid->at(part));
 
                                                 }
-                                              }//else if (abs(dt->dt_Pi()) < 0.50 || (dt->dt_ctof_Pi() < 0.5 && dt->dt_ctof_Pi() > -0.3))
+                                              //else if (abs(dt->dt_Pi()) < 0.50 || (dt->dt_ctof_Pi() < 0.5 && dt->dt_ctof_Pi() > -0.3))
                                                 //(dt->dt_ctof_Pi() > (0.67 * p->at(part) - 4.5))*/
                                                 if (pid->at(part) == PIP){ // cut 9
                                                         event->SetPip(px->at(part), py->at(part), pz->at(part), MASS_PIP);
@@ -246,8 +246,8 @@ void datahandeler(std::string fin, std::string fout) {
                                                 //   }
                                                 //}
 
-                                        } else // cut # 6
-                                                event->SetOther(px->at(part), py->at(part), pz->at(part), MASS_N, pid->at(part));
+                                      //  } else // cut # 6
+                                        //        event->SetOther(px->at(part), py->at(part), pz->at(part), MASS_N, pid->at(part));
                                 }
                         }
 
