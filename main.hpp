@@ -250,6 +250,7 @@ void datahandeler(std::string fin, std::string fout) {
                                         //        event->SetOther(px->at(part), py->at(part), pz->at(part), MASS_N, pid->at(part));
                                 }
                         }
+                      }
 
                         hist->Fill_lu_dist((ec_ecin_lu->at(0) + ec_ecout_lu->at(0) + ec_pcal_lu->at(0)) / 3);
                         hist->Fill_lv_dist((ec_ecin_lv->at(0) + ec_ecout_lv->at(0) + ec_pcal_lv->at(0)) / 3);
