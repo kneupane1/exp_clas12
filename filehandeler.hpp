@@ -21,6 +21,7 @@
 std::vector<float> *startTime;
 std::vector<float> *RFTime;
 std::vector<int> *pid;
+//float mc_weight;
 std::vector<float> *p;
 std::vector<float> *p2;
 std::vector<float> *px;
@@ -195,6 +196,7 @@ void getBranches(TTree *myTree) {
         myTree->SetBranchAddress("startTime", &startTime);
         myTree->SetBranchAddress("RFTime", &RFTime);
         myTree->SetBranchAddress("pid", &pid);
+        //myTree->SetBranchAddress("mc_weight", &mc_weight);
         myTree->SetBranchAddress("p", &p);
         myTree->SetBranchAddress("p2", &p2);
         myTree->SetBranchAddress("px", &px);

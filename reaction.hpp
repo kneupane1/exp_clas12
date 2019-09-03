@@ -151,6 +151,12 @@ bool WopPimEvent() {
 bool WopPipEvent() {
         return ((_numPip == 1) && (_hasE && !_hasP && _hasPip && !_hasPim));
 }
+
+// extra
+bool elecPimEvent() {
+        return ((_numPim == 1) && (_hasE && !_hasP && !_hasPip && _hasPim));
+}
+
 };
 
 #endif
