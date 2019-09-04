@@ -21,13 +21,13 @@ bool Cuts::electron_cuts(int status, int charge, float sf, float vertex_pos, flo
         if (2000 <= abs(status) && abs(status) < 4000) {
                 if (charge == -1) {
                         if (mom_el > 0.20) {
-                                if (sf > 0.16 && sf < 0.28) {
-                                        if (-7.33 < vertex_pos && vertex_pos < 1.80) {
+                                if (sf > 0.18 && sf < 0.28) {
+                                        if (-10 < vertex_pos && vertex_pos < 2) {
                                                 if (-2000 < chi_sq && chi_sq < 2000) {
                                                         x_PCAL_rot = y_PCAL * sin(sec * 60.0 * PI / 180) + x_PCAL * cos(sec * 60.0 * PI / 180);
                                                         y_PCAL_rot = y_PCAL * cos(sec * 60.0 * PI / 180) - x_PCAL * sin(sec * 60.0 * PI / 180);
                                                         angle = 60;
-                                                        height_PCAL = 50; // stafen 45
+                                                        height_PCAL = 75; // stafen 45
                                                         slope_PCAL = 1 / tan(0.5 * angle * PI / 180);
                                                         left_PCAL = (height_PCAL - slope_PCAL * y_PCAL_rot);
                                                         right_PCAL = (height_PCAL + slope_PCAL * y_PCAL_rot);
@@ -81,11 +81,11 @@ bool Cuts::hadron_cuts_ctof(int status, int charge, float mom, int pid, float ch
         if (4000 <= abs(status) && abs(status) <= 6000) {
                 if (charge != 0) {
                         if (mom > 0.20 /* && mom < 3.0*/) {
-                                if (pid == 2212 || pid == 211 || pid == -211) {
-                                        if (-2000 < chi_sq && chi_sq < 2000) {
-                                                return true;
-                                        }
+                                //if (pid == 2212 || pid == 211 || pid == -211) {
+                                if (-2000 < chi_sq && chi_sq < 2000) {
+                                        return true;
                                 }
+                                //}
                         }
                 }
         }
