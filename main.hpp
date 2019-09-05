@@ -363,7 +363,7 @@ void datahandeler(std::string fin, std::string fout) {
             event->W(), event->pip_mu_prime().Mag(),
             (event->pip_mu_prime().Theta() * (180 / PI)), event->Q2(),
             mc_weight);
-        no_pip += 1;
+
         hist->Fill_mom_pip(event->pip_mu_prime().P(),
                            event->pip_mu_prime().Pz());
       }
@@ -374,14 +374,13 @@ void datahandeler(std::string fin, std::string fout) {
             event->W(), event->pim_mu_prime().Mag(),
             (event->pim_mu_prime().Theta() * (180 / PI)), event->Q2(),
             mc_weight);
-        no_pim += 1;
+
         hist->Fill_mom_pim(event->pim_mu_prime().P(),
                            event->pim_mu_prime().Pz());
       }
 
       if ((good_p || good_hadron_ctof_P) && event->p_mu_prime().Theta() != 0 &&
           event->p_mu_prime().P() != 0) {
-        no_proton += 1;
 
         hist->Fill_hist_mass_vs_q2_prot(
             event->W(), event->p_mu_prime().Mag(),
@@ -390,7 +389,7 @@ void datahandeler(std::string fin, std::string fout) {
       }
 
       if (event->elecPimEvent() && good_pim) {
-        no_e_as_well_pim += 1;
+
         e_pim_mom_diff = event->e_mu_prime().P() - event->pim_mu_prime().P();
         e_pim_mom_diff_x =
             event->e_mu_prime().Px() - event->pim_mu_prime().Px();
@@ -405,7 +404,6 @@ void datahandeler(std::string fin, std::string fout) {
       }
       if (event->ProtonPipEvent() && (good_p || good_hadron_ctof_P) &&
           (good_pip || good_hadron_ctof_pip)) {
-        no_p_as_well_pip += 1;
         p_pip_mom_diff = event->p_mu_prime().P() - event->pip_mu_prime().P();
         p_pip_mom_diff_x =
             event->p_mu_prime().Px() - event->pip_mu_prime().Px();
