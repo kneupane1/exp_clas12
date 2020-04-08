@@ -320,13 +320,13 @@ void datahandeler(std::string fin, std::string fout) {
         //   }
         // }
 
-        for (int part = 1; part < pid->size(); part++) {
+        for (int part = 0; part < pid->size(); part++) {
           pid_of_part = pid->at(part);
           mom_at_part = p->at(part);
           charge_at_part = charge->at(part);
-
           hist->Fill_pid_size_fn(pid->size(), pid->at(part));
-
+          if (part = 0)
+            continue;
           if (beta->at(part) < 0.02 || p->at(part) < 0.02)
             continue; // cut # 3
 
