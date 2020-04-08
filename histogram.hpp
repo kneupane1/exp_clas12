@@ -72,7 +72,7 @@ private:
   static const short q2_range_num = 2;
   std::string q2_range_name[q2_range_num] = {
       " Q2<4.5 ",
-      " 4.5<Q2<15.0 "}; //{" Q2<2.0 ", " 2.0<Q2<5.0 ", " 5.0<Q2<10.0 "};
+      " 4.5<Q2<10.0 "}; //{" Q2<2.0 ", " 2.0<Q2<5.0 ", " 5.0<Q2<10.0 "};
   // Kinematics
 
   TH1D *pid_size1;
