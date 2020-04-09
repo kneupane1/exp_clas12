@@ -181,126 +181,6 @@ void datahandeler(std::string fin, std::string fout) {
 
       if (good_e) { // cut # 2
 
-        if (event->e_mu_prime().P() != 0) {
-          hist->Fill_EC_sampling_fraction(
-              event->e_mu_prime().P(),
-              (ec_tot_energy->at(0) / event->e_mu_prime().P()), dc_sec->at(0),
-              mc_weight);
-          if (event->e_mu_prime().P() > 1.0 && event->e_mu_prime().P() < 1.3)
-            hist->Fill_1d_sampling_fraction_1(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-
-          if (event->e_mu_prime().P() > 1.3 && event->e_mu_prime().P() < 1.6)
-            hist->Fill_1d_sampling_fraction_2(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 1.6 && event->e_mu_prime().P() < 1.9)
-            hist->Fill_1d_sampling_fraction_3(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 1.9 && event->e_mu_prime().P() < 2.2)
-            hist->Fill_1d_sampling_fraction_4(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 2.2 && event->e_mu_prime().P() < 2.5)
-            hist->Fill_1d_sampling_fraction_5(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 2.5 && event->e_mu_prime().P() < 2.8)
-            hist->Fill_1d_sampling_fraction_6(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 2.8 && event->e_mu_prime().P() < 3.1)
-            hist->Fill_1d_sampling_fraction_7(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 3.1 && event->e_mu_prime().P() < 3.4)
-            hist->Fill_1d_sampling_fraction_8(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 3.4 && event->e_mu_prime().P() < 3.7)
-            hist->Fill_1d_sampling_fraction_9(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 3.7 && event->e_mu_prime().P() < 4.0)
-            hist->Fill_1d_sampling_fraction_10(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 4.0 && event->e_mu_prime().P() < 4.3)
-            hist->Fill_1d_sampling_fraction_11(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 4.3 && event->e_mu_prime().P() < 4.6)
-            hist->Fill_1d_sampling_fraction_12(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-
-          if (event->e_mu_prime().P() > 4.6 && event->e_mu_prime().P() < 4.9)
-            hist->Fill_1d_sampling_fraction_13(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-
-          if (event->e_mu_prime().P() > 4.9 && event->e_mu_prime().P() < 5.2)
-            hist->Fill_1d_sampling_fraction_14(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 5.2 && event->e_mu_prime().P() < 5.5)
-            hist->Fill_1d_sampling_fraction_15(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 5.5 && event->e_mu_prime().P() < 5.8)
-            hist->Fill_1d_sampling_fraction_16(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-
-          if (event->e_mu_prime().P() > 5.8 && event->e_mu_prime().P() < 6.1)
-            hist->Fill_1d_sampling_fraction_17(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 6.1 && event->e_mu_prime().P() < 6.4)
-            hist->Fill_1d_sampling_fraction_18(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 6.4 && event->e_mu_prime().P() < 6.7)
-            hist->Fill_1d_sampling_fraction_19(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-          if (event->e_mu_prime().P() > 6.7 && event->e_mu_prime().P() < 7.0)
-            hist->Fill_1d_sampling_fraction_20(
-                event->e_mu_prime().P(),
-                (ec_tot_energy->at(0) / event->e_mu_prime().P()), sector,
-                mc_weight);
-
-          hist->Fill_PCAL_VS_ECAL(
-              ec_pcal_energy->at(0),
-              (ec_ecin_energy->at(0) + ec_ecout_energy->at(0)), sector,
-              mc_weight);
-          hist->Fill_hist_PCAL_FID_CUT(ec_pcal_x->at(0), ec_pcal_y->at(0));
-          hist->Fill_hist_DC_FID_CUT(dc_r1_x->at(0), dc_r1_y->at(0),
-                                     dc_r2_x->at(0), dc_r2_y->at(0),
-                                     dc_r3_x->at(0), dc_r3_y->at(0));
-        }
-
         Delta_T *dt =
             new Delta_T(sc_ftof_1b_time->at(0), sc_ftof_1b_path->at(0),
                         sc_ftof_1a_time->at(0), sc_ftof_1a_path->at(0),
@@ -320,13 +200,11 @@ void datahandeler(std::string fin, std::string fout) {
         //   }
         // }
 
-        for (int part = 0; part < pid->size(); part++) {
+        for (int part = 1; part < pid->size(); part++) {
           pid_of_part = pid->at(part);
           mom_at_part = p->at(part);
           charge_at_part = charge->at(part);
           hist->Fill_pid_size_fn(pid->size(), pid->at(part));
-          if (part = 0)
-            continue;
           if (beta->at(part) < 0.02 || p->at(part) < 0.02)
             continue; // cut # 3
 
@@ -457,7 +335,7 @@ void datahandeler(std::string fin, std::string fout) {
               //                 p->at(part));
               //         }
               // }
-              if ((abs(dt->dt_P()) < 0.5 || abs(dt->dt_ctof_P()) < 0.5)
+              if ((abs(dt->dt_P()) < 0.5 || abs(dt->dt_ctof_P()) < 0.4)
                   //(dt->dt_ctof_P() > (1.92* p->at(part) * p->at(part)) - 3.673
                   //*
                   // p->at(part) +2)))
@@ -471,11 +349,10 @@ void datahandeler(std::string fin, std::string fout) {
                 good_hadron_ctof_P = e_cuts->hadron_cuts_ctof(
                     status->at(part), charge->at(part), event->p_mu_prime().P(),
                     pid->at(part), chi2pid->at(part));
-
-              } else if ((abs(dt->dt_Pi()) < 0.50 ||
-                          (dt->dt_ctof_Pi() < 0.5 &&
-                           dt->dt_ctof_Pi() > -0.3)) &&
-                         pid->at(part) == PIP) { // cut 9
+              }
+              if ((abs(dt->dt_Pi()) < 0.50 ||
+                   (dt->dt_ctof_Pi() < 0.3 && dt->dt_ctof_Pi() > -0.3)) &&
+                  pid->at(part) == PIP) { // cut 9
                 event->SetPip(px->at(part), py->at(part), pz->at(part),
                               MASS_PIP);
                 good_pip = e_cuts->pip_cuts(status->at(part), charge->at(part),
@@ -601,8 +478,9 @@ void datahandeler(std::string fin, std::string fout) {
         //   hist->Fill_mom_diff_p_pip(p_pip_mom_diff, p_pip_mom_diff_x,
         //   p_pip_mom_diff_y, p_pip_mom_diff_z);
         // }
-        if (event->W() < 3.50 && event->W() > 0.0 && event->Q2() < 15.0 &&
-            event->Q2() > 0.0 && (good_p || good_hadron_ctof_P) &&
+        if (/*event->W() < 3.50 && event->W() > 0.0 && event->Q2() < 15.0 &&
+            event->Q2() > 0.0 && */
+            (good_p || good_hadron_ctof_P) &&
             (good_pip || good_hadron_ctof_pip) &&
             (good_pim || good_hadron_ctof_pim)) { // cut # 10 11 12
           event->CalcMissMass();

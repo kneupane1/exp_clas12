@@ -108,6 +108,7 @@ public:
   void SetPip(float px, float py, float pz, float mass);
   void SetPim(float px, float py, float pz, float mass);
   void SetOther(float px, float py, float pz, float mass, int pid);
+  void SetNeutron(float px, float py, float pz, float mass); // maile thapeko
 
   void SetElec_thrown(float px, float py, float pz, float mass);
   void SetProt_thrown(float px, float py, float pz, float mass);
