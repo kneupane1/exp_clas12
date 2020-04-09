@@ -189,9 +189,9 @@ public:
     return ((_numProt == 1) && (_hasE && _hasP && !_hasPip && !_hasPim));
   }
   bool twoPionEvent() {
-    return ((/*_numProt == 1 &&*/ _numPip == 1 && _numPim == 1) &&
-            (_hasE && _hasP && _hasPip &&
-             _hasPim /* && !_hasNeutron && !_hasOther*/));
+    return (
+        (/*_numProt == 1 &&*/ _numPip == 1 && _numPim == 1) &&
+        (_hasE && _hasP && _hasPip && _hasPim && !_hasNeutron && !_hasOther));
   }
   bool ProtonPimEvent() {
     return ((_numProt == 1 && _numPim == 1) &&
